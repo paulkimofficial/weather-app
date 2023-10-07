@@ -112,31 +112,45 @@ const MainContainer = (): JSX.Element => {
       <div className='w-full md:max-w-[500px] p-4 flex flex-col text-center items-center justify-start md:px-10 h-full lg:h-[1500px] bg-white bg-opacity-20 backdrop-blur-ls rounded drop-shadow-lg text-zinc-700 shadow-2xl'>
         {weatherData ? (
           <>
-          <Forecast data={weatherData} />
-          <Search
-          city={city}
-          cityOptions={cityOptions}
-          error={error}
-          onCityChange={onCityChange}
-          onCitySelect={onCitySelect}
-          onSubmit={onSubmit}
-          hideLogo={hideLogo}
-          isLoading={isLoading}
-          selectedCity={selectedCity}
-        />
-        </>
+            <Forecast data={weatherData} />
+            <Search
+              city={city}
+              cityOptions={cityOptions}
+              error={error}
+              onCityChange={onCityChange}
+              onCitySelect={onCitySelect}
+              onSubmit={onSubmit}
+              hideLogo={hideLogo}
+              isLoading={isLoading}
+              selectedCity={selectedCity}
+            />
+          </>
         ) : (
-          <Search
-            city={city}
-            cityOptions={cityOptions}
-            error={error}
-            onCityChange={onCityChange}
-            onCitySelect={onCitySelect}
-            onSubmit={onSubmit}
-            hideLogo={hideLogo}
-            isLoading={isLoading}
-            selectedCity={selectedCity}
-          />
+          <>
+            <Search
+              city={city}
+              cityOptions={cityOptions}
+              error={error}
+              onCityChange={onCityChange}
+              onCitySelect={onCitySelect}
+              onSubmit={onSubmit}
+              hideLogo={hideLogo}
+              isLoading={isLoading}
+              selectedCity={selectedCity}
+            />
+
+            <div className='flex flex-col text-center items-center text-xl font-bold tracking-wider avatar'>
+              <div className='mt-10'>
+                <a
+                  href='https://github.com/paulkimofficial/weather-app'
+                  target='_blank'
+                  className=''
+                >
+                  <i className='fa-brands p-1 text-white fa-github'></i>{' '}
+                </a>
+              </div>
+            </div>
+          </>
         )}
       </div>
     </div>
