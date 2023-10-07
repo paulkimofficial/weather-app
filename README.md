@@ -10,11 +10,12 @@ Features at a Glance
 - Weather data includes current temperature, low and high temperature, and weather description.
 
 
-
 Getting Started with Weather Service
 - Simply start typing a city name and suggestions will be provided on cities available to be searched.
 - Click on the city of your search and press the enter button to retrieve weather data.
 - Errors are provided when the service is down or invalid input is provided.
+
+- Run test suites by running npm run test
 
 Tech Stack
 - TypeScript, React.js, Tailwind.css, Vite, Jest, 
